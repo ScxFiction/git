@@ -8,12 +8,12 @@ body{
 	line-height: 1.5em;
 	background: #f4f4f4;
 }
-#container{
+.container{
 	background: #333333;
 	margin: 50px auto;
-	overflow: auto;
-	width: 60%;
-	min-height: 400px;
+	overflow: auto ;
+	width: 60% ;
+	min-height: 630px;
 }
 header h1{
 	color: #ffffff;
@@ -21,10 +21,10 @@ header h1{
 	padding: 15px 0 10px 10px;
 	border-bottom: 1px solid #ffffff;
 }
-#shouts{
+.shouts{
 	width: 90%;
 	background: #f4f4f4;
-	height: 625px;
+	height: 400px;
 	margin: 20px auto;
 	overflow: auto;
 }
@@ -36,27 +36,27 @@ header h1{
 .shout span{
 	color: #aaaaaa;
 }
-#input{
+.input{
 	width: 90%;
 	max-height: 80px;
 	margin: auto;
 	padding: 0;
 }
-#input input[type='text']{
+.input input[type='text']{
 	height: 25px;
 	width: 48%;
 	padding: 3px;
 	margin-bottom: 20px;
 	border: #666666 solid 1px;
 }
-#input .shout-btn{
-	padding: 5px;
+.input .shout-btn{
+	padding: 13px;
 	margin-bottom: 30px;
 	width: 100%;
 	margin: 10px auto;
 }
 @media only screen and (max-width: 768px){
-	#input input[type='text']{
+	.input input[type='text']{
 		width: 98%;
 	}
 }
