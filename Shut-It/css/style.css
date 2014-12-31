@@ -24,7 +24,7 @@ header h1{
 .shouts{
 	width: 90%;
 	background: #f4f4f4;
-	height: 400px;
+	height: 360px;
 	margin: 20px auto;
 	overflow: auto;
 }
