@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>PHP QUEZZER</title>
+	<title>PHP QUEZZER Question</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 <body>
 	<header>
 		<div class="conteiner">
-			<h1>PHP Quizzer</h1>
+			<h1>PHP Quizzer Question</h1>
 		</div>
 	</header>
 	<main>
@@ -25,7 +25,7 @@
 					<li><input name="choice" type="radio" value="1" />PHP: Hypertext Processor</li>
 					<li><input name="choice" type="radio" value="1" />Personal Hypertext Processor</li>
 				</ul>
-				<input type="submit" value="submit" />
+				<input type="submit" value="Submit" />
 			</form>
 		</div>
 	</main>
