@@ -5,7 +5,7 @@ include 'database.php';
 if(isset($_POST['submit'])){
 	$user = mysqli_real_escape_string($con, $_POST['user']);
 	$message = mysqli_real_escape_string($con, $_POST['message']);	
-}
+
 	//Set timezone
 	date_default_timezone_get('Europe/Belgrade');
 	$time = date('h;i;s a', time());
@@ -14,7 +14,15 @@ if(isset($_POST['submit'])){
 	if (!isset($user) || $user == '' || !isset($message) || $message == '' ) {
 		echo "bad";
 	}else{
-		echo "god";
+		$query = "INSERT INTO shouts(user, message, time)
+			VALUES ('$user', '$message', '$time')";
+	//If did not inserted die or redirect back to index.php
+	if (!mysqli_query($con, $query)) {
+				die('Error: ' .mysql_error($con));
+			}else{
+				header("Location: index.php");
+				exit();
+			}		
 	}
-
+}
 ?>
