@@ -12,11 +12,14 @@ if(isset($_POST['submit'])){
 
 	//Valadate input
 	if (!isset($user) || $user == '' || !isset($message) || $message == '' ) {
-		echo "bad";
+		//If not fill correctly  urlencode redirect output error message#2
+		$error = "Please fill in your name and a message";
+		header("Location: index.php?error=".urlencode($error));
+		exit();
 	}else{
 		$query = "INSERT INTO shouts(user, message, time)
 			VALUES ('$user', '$message', '$time')";
-	//If did not inserted die or redirect back to index.php
+	//If did not inserted die or redirect back to index.php #1
 	if (!mysqli_query($con, $query)) {
 				die('Error: ' .mysql_error($con));
 			}else{

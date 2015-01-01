@@ -24,6 +24,10 @@
 				</ul>
 			</div>
 			<div class="input">
+				<!-- Set if is error variabele is there -->
+				<?php if(isset($_GET['error'])) : ?>
+					<div class="error"><?php echo $_GET['error']; ?></div>
+				<?php endif; ?>
 				<form method="post" action="process.php">
 					<input type="text" name="user" placeholder="Enter Your Name" />
 					<input type="text" name="message" placeholder="Enter A Message" />
