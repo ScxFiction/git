@@ -7,8 +7,8 @@ if(isset($_POST['submit'])){
 	$message = mysqli_real_escape_string($con, $_POST['message']);	
 
 	//Set timezone
-	date_default_timezone_get('Europe/Belgrade');
-	$time = date('h;i;s a', time());
+	date_default_timezone_get("Europe/Belgrade");
+	$time = date("H:i:s", time());
 
 	//Valadate input
 	if (!isset($user) || $user == '' || !isset($message) || $message == '' ) {
@@ -21,7 +21,7 @@ if(isset($_POST['submit'])){
 			VALUES ('$user', '$message', '$time')";
 	//If did not inserted die or redirect back to index.php #1
 	if (!mysqli_query($con, $query)) {
-				die('Error: ' .mysql_error($con));
+				die('Error: ' .mysqli_error($con));
 			}else{
 				header("Location: index.php");
 				exit();
