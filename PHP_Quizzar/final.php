@@ -23,7 +23,7 @@
 	</main>
 	<footer>
 		<div class="container">
-			Copyright &copy; 2014, ScxPhpWorkOut
+			Copyright &copy; 2015, ScxPhpWorkOut
 		</div>
 	</footer>
 </body>
