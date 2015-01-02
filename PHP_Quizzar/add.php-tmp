@@ -1,3 +1,9 @@
+<?php include 'database.php';?>
+<?php
+if (isset($_POST['submit'])) {
+	echo "Submit was clicked";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
