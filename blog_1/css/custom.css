@@ -176,3 +176,18 @@ h6, .h6 {
   width: 100%;
   padding-bottom: 25px;
 }
+
+/* Read More Button */
+.readmore{
+  display: block;
+  text-align: center;
+  padding: 5px;
+  background: #f4f4f4;
+  margin-top: 10px;
+  color: #666;
+}
+.readmore:hover{
+  background: #ccc;
+  color: #666;
+  text-decoration: none;
+};

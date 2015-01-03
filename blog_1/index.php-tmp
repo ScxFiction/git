@@ -7,7 +7,7 @@
     <meta name="description" content="">
 
 
-    <title>Welcome To PHP ScxFiction Blog</title>
+    <title>Welcome To Scxripts PHP Blog</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
@@ -21,8 +21,8 @@
     <div class="blog-masthead">
       <div class="container">
         <nav class="blog-nav">
-          <a class="blog-nav-item active" href="#">Home</a>
-          <a class="blog-nav-item" href="#">New Posts</a>
+          <a class="blog-nav-item active" href="index.php">Home</a>
+          <a class="blog-nav-item" href="posts.php">New Posts</a>
         </nav>
       </div>
     </div>
@@ -50,6 +50,9 @@
             <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
 
             <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+
+            <a class="readmore" href="post.php?id=1">Read More</a>
+
           </div><!-- /.blog-post -->
 <!-- // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
           <div class="blog-post">
@@ -60,6 +63,9 @@
 
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+
+            <a class="readmore" href="post.php?id=1">Read More</a>
+
           </div><!-- /.blog-post -->
 <!-- // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
           <div class="blog-post">
@@ -74,6 +80,9 @@
             </ul>
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+
+            <a class="readmore" href="post.php?id=1">Read More</a>
+
           </div><!-- /.blog-post -->
 <!-- //  End Of Posts //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -93,30 +102,15 @@
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>
           <div class="sidebar-module">
-            <h4>Archives</h4>
+            <h4>Categories</h4>
             <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Tutorials</a></li>
+              <li><a href="#">Misc</a></li>
             </ol>
           </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
+
         </div><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
@@ -124,7 +118,7 @@
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>Scxripts blog &copy; 2015</p>
       <p>
         <a href="#">Back to top</a>
       </p>
