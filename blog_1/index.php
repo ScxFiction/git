@@ -1,4 +1,10 @@
+<?php include 'config/config.php'; ?>
+<?php include 'libraries/Database.php'; ?>
 <?php include 'includes/header.php'; ?>
+<?php  
+  // Create DB Object
+  $db = new Database();
+?>
 <!-- //  Posts begining////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
           <div class="blog-post">
             <h2 class="blog-post-title">Sample blog post</h2>
