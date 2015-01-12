@@ -15,7 +15,6 @@ class Database{
 	*/
 	public function __construct()
 	{
-
 		//Call Connect Function
 		$this->connect();
 		
@@ -36,13 +35,59 @@ class Database{
 	 * Select
 	*/
 	public function select($query){
-		$result = $this->link->query($query) or die($this->link->error.__LINE__);
+		$result = $this->link->query($query) or die ($this->link->error.__LINE__);
 		if ($result->num_rows > 0) {
 			return result ;
 		}else{
 			return false;
 		}
 	}
+	/*
+	 * Insert
+	 */
+	
+	public function insert($query){
+		$insert_row = $this->link->query($query) or die($this->link->error.__LINE__);
+
+		//Validate Insert
+		if ($insert_row) {
+			header("Location: index.php?msg=".urlencode('Record Added'));
+			exit();
+		}else{
+			die('Error : ('. $this->link->errno .') '. $this->link_error);
+		}
+	}
+	/*
+	 * Update
+	 */
+	
+	public function update($query){
+		$update_row = $this->link->query($query) or die($this->link->error.__LINE__);
+
+		//Validate Insert
+		if ($update_row) {
+			header("Location: index.php?msg=".urlencode('Record Updated'));
+			exit();
+		}else{
+			die('Error : ('. $this->link->errno .') '. $this->link_error);
+		}
+	}
+	/*
+	 * Delete
+	 */
+	
+	public function delete($query){
+		$delete_row = $this->link->query($query) or die($this->link->error.__LINE__);
+
+		//Validate Insert
+		if ($delete_row) {
+			header("Location: index.php?msg=".urlencode('Record Deleted'));
+		}else{
+			die('Error : ('. $this->link->errno .') '. $this->link_error);
+		}
+	}
 }
+
+
 
 ?>
