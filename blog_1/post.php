@@ -2,16 +2,25 @@
 
 <!-- // Some Post////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
           <div class="blog-post">
-            <h2 class="blog-post-title">Sample blog post</h2>
+            <h2 class="blog-post-title">Dynamic Linking in Action</h2>
             <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
 
 
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+            <p>One of the more popular PHP-driven applications on the Web today is the blogging
+platform WordPress. As a blogger or a blog reader, you might not realize
+it, but every major section has been given its own main PHP file, and a whole raft of
+generic, shared functions have been placed in separate files that are included by the
+main PHP pages as necessary.</p>
            
-            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+            <p>The whole platform is held together with behind-the-scenes session tracking, so that
+you hardly know when you are transitioning from one subsection to another. So, as a
+web developer, if you want to tweak WordPress, it’s easy to find the particular file you
+need, modify it, and test and debug it without messing around with unconnected parts
+of the program.</p>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab sed alias, explicabo numquam voluptate odio necessitatibus voluptas quo possimus iusto nemo suscipit, dolor qui corporis obcaecati consequatur. Non, est magnam!</p>
-
+            <p>Next time you use WordPress, keep an eye on your browser’s address bar, particularly
+if you are managing a blog, and you’ll notice some of the different PHP files that it uses.</p>
+			
           </div><!-- /.blog-post -->
 <!-- // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
           
