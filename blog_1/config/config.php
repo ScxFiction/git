@@ -5,5 +5,5 @@
 	define('DB_HOST', 'localhost'); 
 	define('DB_USER', 'shut');
 	define('DB_PASS', 'sho1234');
-	define('DB_NAME', 'cd_1');		
+	define('DB_NAME', 'cd_1');
 ?>
