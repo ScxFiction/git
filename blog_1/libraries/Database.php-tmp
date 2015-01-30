@@ -24,7 +24,7 @@ class Database {
 	 */
 	private function connect() {
 		$this->link = new mysqli($this->host, $this->username, $this->password, $this->db_name);
-
+		// if not connected or is not true display error
 		if (!$this->link) {
 			$his->error = "Connection Faile ".$this->link->connect_error;
 			return false;
