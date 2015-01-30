@@ -4,7 +4,19 @@
 <?php  
   // Create DB Object
   $db = new Database();
+
+  //Create Query
+  $query = "SELECT * FROM posts";
+
+  //Run Query
+  $posts = $db->select($query);
+
+
+
 ?>
+
+<?php if($posts): ?>
+
 <!-- //  Posts begining////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
           <div class="blog-post">
             <h2 class="blog-post-title">Sample blog post</h2>
@@ -49,13 +61,7 @@
 
           </div><!-- /.blog-post -->
 <!-- //  End Of Posts //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-
-<!--           <nav>
-  <ul class="pager">
-    <li><a href="#">Previous</a></li>
-    <li><a href="#">Next</a></li>
-  </ul>
-</nav>
- -->
+<?php else: ?>
+  <p>There are no posts yet</p>
+<?php endif; ?>
 <?php include 'includes/footer.php'; ?>
