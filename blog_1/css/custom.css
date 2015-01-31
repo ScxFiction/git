@@ -190,4 +190,7 @@ h6, .h6 {
   background: #ccc;
   color: #666;
   text-decoration: none;
-};
+}
+.none{
+  display: none;
+}
