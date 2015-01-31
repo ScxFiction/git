@@ -3,15 +3,14 @@
         <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module sidebar-module-inset">
             <h4>About</h4>
-            <p>Sxripts <em>is a code puzzle blog.</em> </p>
-            <p>For learning PHP and find solutions with examples.Experiencing Real PHP Wing Chu arts of coding.</p>
+                <?php echo $site_description; ?>
           </div>
           <div class="sidebar-module">
             <h4>Categories</h4>
             <?php if($categories): ?>
             <ol class="list-unstyled">
               <?php while($row = $categories->fetch_assoc()): ?>
-                <li><a href="#"><?php echo $row['name'];?></a></li>
+                <li><a href="posts.php?category=<?php echo $row['id'];?>"><?php echo $row['name'];?></a></li>
               <?php endwhile; ?>
             </ol>
           <?php else: ?>

@@ -1,4 +1,6 @@
-
+<?php include 'config/config.php'; ?>
+<?php include 'libraries/Database.php'; ?>
+<?php include 'helpers/format_helper.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,7 +33,7 @@
     <div class="container">
 
       <div class="blog-header">
-      <div class="logo"><img src="images/logo.jpg" alt=""></div>
+      <div class="logo"><a href="index.php"><img src="images/logo.jpg" alt="Logo"></a></div>
       
    <!--      <h1 class="blog-title">Section</h1>
 <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p> -->
