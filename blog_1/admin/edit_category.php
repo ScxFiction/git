@@ -18,7 +18,7 @@
 ?>
     <form role="form" method="post" action="edit_category.php">
         <div class="form-group">
-            <label>E Name</label>
+            <label>Category Name</label>
             <input name="name" type="text"  class="form-control" placeholder="Enter category" value="<?php echo $category['name']; ?>">
         </div>
 
