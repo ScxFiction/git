@@ -15,6 +15,7 @@ $RECYCLE.BIN/
 *.msp
 *.php-tmp
 *.idea
+*.phpintel
 
 # Windows shortcuts
 *.lnk
@@ -45,4 +46,4 @@ Temporary Items
 .apdisk
 
 # Database config files
-config.php
+config/

@@ -25,7 +25,7 @@
       <div class="container">
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="index.php">Home</a>
-          <a class="blog-nav-item" href="posts.php">New Posts</a>
+          <a class="blog-nav-item" href="posts.php">All Posts</a>
         </nav>
       </div>
     </div>

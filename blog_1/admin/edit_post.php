@@ -16,28 +16,66 @@
     //Run Query
     $categories = $db->select($query);
 ?>
+<?php  
+    if (isset($_POST['submit'])) {
+        //Assign Vars
+        $title = mysqli_real_escape_string($db->link, $_POST['title']);
+        $body = mysqli_real_escape_string($db->link, $_POST['body']);
+        $category = mysqli_real_escape_string($db->link, $_POST['category']);
+        $author = mysqli_real_escape_string($db->link, $_POST['author']);
+        $tags = mysqli_real_escape_string($db->link, $_POST['tags']);
+        //Simple Validation
+        if ($title == '' || $body == '' || $category == '' || $author == '') {
+            //Set Error
+            $error = 'Please fill out all required fields';
+        }else{
+            $query = "UPDATE posts 
+                        SET title = '$title',
+                            body = '$body',
+                            category = '$category',
+                            author = '$author',
+                            tags = '$tags'
+                        WHERE id =" .$id;
 
-    <form role="form" method="post" action="edit_post.php">
+            $update_row = $db->update($query);
+
+        }
+    }
+?>
+<?php 
+
+    if (isset($_POST['delete'])) {
+        $query = "DELETE FROM posts WHERE id = ".$id;
+            $delete_row = $db->delete($query);
+    }
+
+
+
+?>
+
+    <form role="form" method="post" action="edit_post.php?id=<?php echo $id; ?>">
         <div class="form-group">
-            <label>Post title</label><!--NOTE: Database Query title field -->
+            <label>Post title</label><!--NOTE: Database Query =Title= field -->
             <input name="title" type="text" class="form-control" placeholder="Enter title" value="<?php echo $post['title']; ?>">
         </div>
         <div class="form-group">
-            <label>Post Body</label><!--NOTE: Database Query body field  -->   
+            <label>Post Body</label><!--NOTE: Database Query =Body= field  -->
             <textarea name="body" class="form-control" placeholder="Enter Post Body">        
                 <?php echo $post['body']; ?>
             </textarea>
         </div>
         <div class="form-group">
-            <label>Category Select</label><!--NOTE: Database Query category field  --> 
+            <label>Categories</label><!--NOTE: Database Query =Category= field  -->
             <select name="category" id="form-control">
-                <?php while($row = $categories->fetch_assoc()) : ?><!-- NOTE: Selected category that is ON the list -->
+                <?php while($row = $categories->fetch_assoc()) : ?><!-- NOTE: Selected =Categories= that is ON the list -->
                     <?php if($row['id'] == $post['category']) {
                         $selected = 'selected';
                     }else{
                         $selected = '';
                     }?>
-                    <option <?php echo $selected; ?>><?php echo $row['name']; ?></option>
+                    <option value = "<?php echo $row['id']; ?>" <?php echo $selected; ?>>
+                        <?php echo $row['name']; ?>
+                    </option>
                 <?php endwhile ; ?>
             </select>
         </div>
@@ -49,13 +87,13 @@
         <!--Tags-->
         <div class="form-group">
             <label>Tags</label>
-            <input name="Tags" type="text" class="form-control" placeholder="Enter Tags" value="<?php echo $post['tags']; ?>">
+            <input name="tags" type="text" class="form-control" placeholder="Enter Tags" value="<?php echo $post['tags']; ?>">
         </div>
 
         <div>
             <input name="submit" type="submit" class="btn btn-default" value="Submit" />
             <a href="index.php" class="btn btn-default">Cancel</a>
-            <input name="delete" type="submit" class="btn btn-danger" value="Delete" />
+            <input name="delete" type="submit" class="btn btn-danger" value="Delete" /><!--NOTE: Delete  woking-->
 
         </div>
         <br/>

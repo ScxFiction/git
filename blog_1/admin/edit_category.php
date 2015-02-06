@@ -16,7 +16,35 @@
     //Run Query
     $categories = $db->select($query);
 ?>
-    <form role="form" method="post" action="edit_category.php">
+<?php
+if (isset($_POST['submit'])) {
+    //Assign Vars
+    $name = mysqli_real_escape_string($db->link, $_POST['name']);
+    //Simple Validation
+    if ($name == '') {
+        //Set Error
+        $error = 'Please fill out all required fields';
+    }else{
+        $query = "UPDATE categories
+                        SET
+                        name = '$name'
+                        WHERE
+                        id =".$id;
+
+        $update_row = $db->update($query);
+    }
+}
+?>
+<?php
+
+if (isset($_POST['delete'])) {
+    $query = "DELETE FROM categories WHERE id = ".$id;
+    $delete_row = $db->delete($query);
+}
+
+?>
+
+    <form role="form" method="post" action="edit_category.php?id=<?php echo $id; ?>">
         <div class="form-group">
             <label>Category Name</label>
             <input name="name" type="text"  class="form-control" placeholder="Enter category" value="<?php echo $category['name']; ?>">

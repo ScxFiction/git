@@ -27,7 +27,7 @@
           <a class="blog-nav-item active" href="index.php">Dashboard</a>
           <a class="blog-nav-item" href="add_post.php">Add Post</a>
           <a class="blog-nav-item" href="add_category.php">Add Category</a>
-          <a class="blog-nav-item pull-right" href="../index.php">Visit Blog</a>
+          <a class="blog-nav-item pull-right" href="../index.php">Front Page</a>
         </nav>
       </div>
     </div>
@@ -37,11 +37,14 @@
       <div class="blog-header">
       <!-- NOTE: class none  -->
       <div class="none" " "><a href="index.php"><img src="../images/logo.jpg" alt="Logo"></a></div>
-      
         <h1>Admin Area</h1>
- <!--        <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p> -->
       </div>
 
       <div class="row">
 
         <div class="col-sm-12 blog-main">
+<?php
+if (isset($_GET['msg'])) : ?>
+  <div class="alert alert-success"><?php echo htmlentities($_GET['msg']); ?></div>
+<?php endif; ?>
+
