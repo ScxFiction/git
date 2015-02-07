@@ -13,12 +13,15 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+# Exclude project extensions
 *.php-tmp
 *.idea
 *.phpintel
+config.php
 
 # Windows shortcuts
 *.lnk
+
 
 # =========================
 # Operating System Files
