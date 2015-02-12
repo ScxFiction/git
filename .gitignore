@@ -13,9 +13,19 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
-
+# Exclude project extensions
+*.php-tmp
+*.idea
+*.iml
+*.phpintel
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+#config.php no-watch via git
+config.php
 # Windows shortcuts
 *.lnk
+
 
 # =========================
 # Operating System Files
