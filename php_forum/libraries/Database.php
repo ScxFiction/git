@@ -98,7 +98,4 @@ class Database{
 		return $this->dbh->rollBack();
 	}
 
-
-
-
 }

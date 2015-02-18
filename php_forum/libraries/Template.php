@@ -33,7 +33,7 @@ class Template{
 	public function __toString(){
 		extract($this->vars);
 		chdir(dirname($this->template));
-		ob_start();
+		ob_start(); //output buffering
 
 	include basename($this->template);
 	return ob_get_clean();
