@@ -1,97 +1,39 @@
 <?php include ('includes/header.php'); ?>                           
     <ul id="topics">
+<?php if ($topics) : ?>
+    <?php foreach ($topics as $topic) : ?>        
         <li class="topic">
-        <div class="row">    
+        <div class="row">     
         <div class="col-md-2">
-                <img class="avatar pull-left" src="../images/gravatar.jpg"/>
+                <img class="avatar pull-left" src="../images/<?php echo $topic->avatar; ?>"/>
         </div>
             <div class="col-md-10">
                 <div class="topic-content pull-right">
-                    <h3><a href="topic.php">How did you learn CSS and HTML </a></h3>
+                    <h3><a href="topic.php"><?php echo $topic->title; ?></a></h3>
                     <div class="topic-info">
-                        <a href="category.html">Development</a> >> <a href="profile.html"><Okt81c</a>
-                        <a href="">User</a>
+                        <a href="topics.php?category=<?php echo urlFormat($topic->category_id); ?>">
+                        <?php echo $topic->name; ?></a> >> 
+                        <a href="topics.php?user=<?php echo urlFormat($topic->user_id); ?>"><?php echo $topic->username; ?></a> >>
+                        <?php echo formatDate($topic->create_date); ?>
                         <span class="badge  pull-right">3</span>
                     </div>
                 </div>
             </div>
         </div>  
-        </li>
-        <li class="topic">
-            <div class="row">
-            <div class="col-md-2">
-                <img class="avatar pull-left" src="../images/gravatar.jpg"/>
-            </div>
-            <div class="col-md-10">
-                <div class="topic-content pull-right">
-                    <h3><a href="topic.php">How to create new page dynamically in php</a></h3>
-                    <div class="topic-info">
-                        <a href="category.html">Development</a> >> <a href="profile.html"><Okt81c</a>
-                        <a href="">User</a>
-                        <span class="badge  pull-right">7</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </li>
-        <li class="topic">
-            <div class="row">
-            <div class="col-md-2">
-                <img class="avatar pull-left" src="../images/gravatar.jpg"/>
-            </div>
-            <div class="col-md-10">
-                <div class="topic-content pull-right">
-                    <h3><a href="topic.php">Google Panda - Who's affectedL</a></h3>
-                    <div class="topic-info">
-                        <a href="category.html">Search Engines</a> >> <a href="profile.html"><Okt81c</a>
-                        <a href="">User</a>
-                        <span class="badge  pull-right">4</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </li>
-        <li class="topic">
-            <div class="row">
-            <div class="col-md-2">
-                <img class="avatar pull-left" src="../images/gravatar.jpg"/>
-            </div>
-            <div class="col-md-10">
-                <div class="topic-content pull-right">
-                    <h3><a href="topic.php">Best Web Application Frameworks</a></h3>
-                    <div class="topic-info">
-                        <a href="category.html">Development</a> >> <a href="profile.html"><Okt81c</a>
-                        <a href="">User</a>
-                        <span class="badge  pull-right">1</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </li<>
-        <li class="topic">
-            <div class="row">
-            <div class="col-md-2">
-                <img class="avatar pull-left" src="../images/gravatar.jpg"/>
-            </div>
-            <div class="col-md-10">
-                <div class="topic-content pull-right">
-                    <h3><a href="topic.php">Code chalenges</a></h3>
-                    <div class="topic-info">
-                        <a href="category.html">Exercises</a> >> <a href="profile.html"><Okt81c</a>
-                        <a href="">User</a>
-                        <span class="badge  pull-right">2</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </li>                                               
+    </li>                                               
+    <?php endforeach ?>
+   
     </ul> <!-- end of topics list -->
-        
-        <hr/>
-        <h3>Form Statistics</h3>
-        <ul>
-            <li>Total Number of Users: <strong>52</strong></li>
-            <li>Total Number of Topics: <strong>10</strong></li>
-            <li>Total Number of Categories: <strong>5</strong></li>
-        </ul> <!-- Statistics -->
+<?php else: ?>
+    <p>No Topics To Display</p>
+<?php endif; ?>     
+   
+
+    <h3>Form Statistics</h3>
+    <ul>
+        <li>Total Number of Users: <strong>52</strong></li>
+        <li>Total Number of Topics: <strong>10</strong></li>
+        <li>Total Number of Categories: <strong>5</strong></li>
+    </ul> <!-- Statistics -->
+
 <?php include ('includes/footer.php'); ?>
