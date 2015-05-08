@@ -5,7 +5,7 @@
         <li class="topic">
         <div class="row">     
         <div class="col-md-2">
-                <img class="avatar pull-left" src="../images/<?php echo $topic->avatar; ?>"/>
+                <img class="avatar pull-left" src="images/avatars/<?php echo $topic->avatar; ?>"/>
         </div>
             <div class="col-md-10">
                 <div class="topic-content pull-right">
@@ -15,7 +15,7 @@
                         <?php echo $topic->name; ?></a> >> 
                         <a href="topics.php?user=<?php echo urlFormat($topic->user_id); ?>"><?php echo $topic->username; ?></a> >>
                         <?php echo formatDate($topic->create_date); ?>
-                        <span class="badge  pull-right">3</span>
+                        <span class="badge  pull-right"><?php echo replyCount($topic->id); ?></span>
                     </div>
                 </div>
             </div>
@@ -32,8 +32,8 @@
     <h3>Form Statistics</h3>
     <ul>
         <li>Total Number of Users: <strong>52</strong></li>
-        <li>Total Number of Topics: <strong>10</strong></li>
-        <li>Total Number of Categories: <strong>5</strong></li>
+        <li>Total Number of Topics: <strong><?php echo $totalTopics; ?></strong></li>
+        <li>Total Number of Categories: <strong><?php echo $totalCategories; ?></strong></li>
     </ul> <!-- Statistics -->
 
 <?php include ('includes/footer.php'); ?>

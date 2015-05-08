@@ -24,11 +24,10 @@
             <div class="block">
                 <h3>Categories</h3>
                 <div class="list-group">
-                    <a href="#" class="list-group-item active">All Topics <span class="badge pull-right">14</span></a>
-                    <a href="#" class="list-group-item">Design <span class="badge pull-right">4</span></a>
-                    <a href="#" class="list-group-item">Development <span class="badge pull-right">9</span></a>
-                    <a href="#" class="list-group-item"> Business & Marketing <span class="badge pull-right">12</span></a>
-                    <a href="#" class="list-group-item"> Search Engines <span class="badge pull-right">7</span></a>
+                    <a href="topics.php" class="list-group-item <?php echo is_active(null); ?> ">All Topics <span class="badge pull-right"></span></a>
+                <?php foreach (getCategories() as $category) : ?>
+                    <a href="topics.php?category=<?php echo $category->id; ?>" class="list-group-item <?php echo is_active($category->id); ?>" ><?php echo $category->name; ?></a>
+                <?php endforeach; ?>
                 </div>
             </div>
 
@@ -42,6 +41,6 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="js/bootstrap.js"></script>
+<script src="../js/bootstrap.js"></script>
 </body>
 </html>

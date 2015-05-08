@@ -1,5 +1,12 @@
 <?php
 /*
+*  Format Date
+*/
+function formatDate($date){
+	$date = date("F j, Y, g:i a", strtotime($date));
+	return $date;
+}
+/*
 * URL Format Function
 */
 function urlFormat($str){
@@ -12,9 +19,18 @@ function urlFormat($str){
 	return $str;
 }
 /*
-*  Format Date
+* Add calassname is_active if category is active
 */
-function formatDate($date){
-	$date = date("F j, Y, g:i a", strtotime($date));
-	return $date;
+function is_active($category){
+	if(isset($_GET['category'])){
+		if ($_GET['category'] == $category) {
+			return 'active';
+		}else {
+			return '';
+			}
+		}else{
+			if ($category == null) {
+				return 'active';
+			}
+}
 }
